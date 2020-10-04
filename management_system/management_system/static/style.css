@@ -10,14 +10,26 @@
   max-width: 51rem;
 }
 
+h1{
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
 .info {
   background-color: #cfcfcf;
   color: #000000;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  text-align: center;
+  text-align: justify;
   width: 60%;
   border: 2px solid #696969;
   border-radius: 5px;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.info:hover{
+  background-color: #dfdfdf;
 }

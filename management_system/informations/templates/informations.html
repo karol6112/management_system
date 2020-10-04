@@ -1,14 +1,15 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 <div class="container_info">
   {% for info in informations %}
 
   <div class="info">
-    {{ info.title }}
+  <h1>  {{ info.title }} </h1>
+    {{ info.text|truncatewords:50 }}
     <br />
     {{ info.date }}
     <br />
   </div>
-  
 
   {% endfor %}
 </div>
