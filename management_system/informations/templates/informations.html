@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container_info">
+  {% for info in informations %}
+
+  <div class="info">
+    {{ info.title }}
+    <br />
+    {{ info.date }}
+    <br />
+  </div>
+  
+
+  {% endfor %}
+</div>
+
+{% endblock %}

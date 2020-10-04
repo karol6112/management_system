@@ -22,7 +22,8 @@ from informations import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.InformationListView.as_view(), name='home'),
+    path('home/', views.InformationListView.as_view(), name='informations'),
+    path('add/', views.InformationsCreateView.as_view(), name='add_informations'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
