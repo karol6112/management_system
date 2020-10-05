@@ -1,16 +1,24 @@
 {% extends 'base.html' %} 
 {% block content %}
-<div class="container_info">
-  {% for info in informations %}
 
-  <div class="info">
+<div class="container_info">
+
+  {% for info in informations %}
+  <div
+   {%if info.status == 'normal' %} class="info_normal"
+   {% else %}
+   class="info_important"
+   {% endif %}>
+
+
   <h1>  {{ info.title }} </h1>
     {{ info.text|truncatewords:50 }}
-    <br />
+    
+    <h2>
     {{ info.date }}
-    <br />
+    </h2>
+    
   </div>
-
   {% endfor %}
 </div>
 

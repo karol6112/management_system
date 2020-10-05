@@ -4,7 +4,7 @@ from django.views import generic
 from .models import Information
 
 
-class InformationsCreateView(generic.CreateView):
+class InformationCreateView(generic.CreateView):
     model = Information
     template_name = 'add_informations.html'
     fields = ['title', 'text']
@@ -20,4 +20,10 @@ class InformationListView(generic.ListView):
     model = Information
     context_object_name = 'informations'
     template_name = 'informations.html'
+
+
+class InformationDetailView(generic.DetailView):
+    model = Information
+    context_object_name = 'information'
+    template_name = 'detail_information.html'
 
