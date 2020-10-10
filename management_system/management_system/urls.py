@@ -15,17 +15,18 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from informations import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #
+    path('users/', include('users.urls')),
+    #
     path('add/', views.InformationCreateView.as_view(), name='add_informations'),
     path('info/', views.InformationListView.as_view(), name='info'),
     path('info/<int:pk>/', views.InformationDetailView.as_view(), name='detail_information'),
-
 
 ]
 

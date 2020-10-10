@@ -26,4 +26,3 @@ class InformationDetailView(generic.DetailView):
     model = Information
     context_object_name = 'information'
     template_name = 'detail_information.html'
-
