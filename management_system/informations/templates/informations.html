@@ -4,22 +4,19 @@
 <div class="container_info">
 
     {% for info in informations %}
-    <a href="{% url 'detail_information' info.pk %}"p>
-
+    <a href="{% url 'detail_information' info.pk %}" p>
         <div class="info_normal">
-
-
             <h1> {{ info.title }} </h1>
             {{ info.text|truncatewords:50 }}
-
             <h2>
-              {{info.author.first_name}} {{info.author.last_name}} {{ info.date }}
+                {{info.author.first_name}} {{info.author.last_name}} {{ info.date }}
             </h2>
-
         </div>
-
     </a>
     {% endfor %}
+
+    {% include "pagination.html" with page=page_obj %}
+
 </div>
 
 {% endblock %}

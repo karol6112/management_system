@@ -19,6 +19,7 @@ class InformationCreateView(generic.CreateView):
 class InformationListView(generic.ListView):
     model = Information
     context_object_name = 'informations'
+    paginate_by = 2
     template_name = 'informations.html'
 
 

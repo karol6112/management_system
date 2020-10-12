@@ -48,3 +48,10 @@ a, a:hover{
 text-decoration: none;
 display: block;
 }
+
+.pagination{
+display:block;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
