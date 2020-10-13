@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <h2>Update</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+      {{ user_form.as_p}}
+      {{ profile_form.as_p}}
+    </div>
+    <input type="submit" class="btn btn-primary" value="Update">
+  </form>
+
+{% endblock %}

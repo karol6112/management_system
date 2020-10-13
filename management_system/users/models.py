@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-class Staff_member(models.Model):
+class Profile(models.Model):
     POSITION = (
         ('operator', 'Operator'),
         ('manager', 'Manager'),
@@ -12,4 +12,7 @@ class Staff_member(models.Model):
     )
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     position = models.CharField(choices=POSITION, max_length=100, blank=True)
-    image = models.ImageField(default='media/profile_pictures/default.gif', upload_to='media/profile_pictures')
+    image = models.ImageField(default='profile_pictures/default.gif', upload_to='media/profile_pictures')
+
+    def __str__(self):
+        return self.user.first_name + ' ' + self.user.last_name
